@@ -14,12 +14,9 @@
     {% block content %}
 
     {% for dish in dishes |sort(attribute='price') %}
-    <li>
-        {% if dish.price > 220 %} '
+
         <b>{{dish.dish}}: </b> {{dish.price}}<br>
 
-
-    </li>
     {% endfor %}
 
 

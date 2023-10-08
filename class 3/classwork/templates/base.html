@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %} {{title}} {% endblock title %}
+    </title>
+</head>
+<body>
+<header>
+    {% include '_navigation.html' %}
+</header>
+{% import 'macros.html' as macros %}
+{% block content %}
+<h1>Welcome to {{title}}</h1>
+  <b1>Countries and their national legacy</b1>
+    <table boarder="1">
+        <thead>
+            <tr>
+                <th>Country</th>
+                <th>National legacy</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ukraine</td>
+                <td>Kozatsyka tradition, borsch, vyshyvanky</td>
+            </tr>
+            <tr>
+                <td>United States of America</td>
+                <td>Freedom, anthem "Stare-fire", hamburgers</td>
+            </tr>
+            <tr>
+                <td>Italy</td>
+                <td>Pizza, opera, art of renaissance</td>
+            </tr>
+        </tbody>
+{% endblock content %}
+
+        <footer>
+            {{ macros.light_or_dark_mode('body') }}
+        </footer>
+</body>
+</html>

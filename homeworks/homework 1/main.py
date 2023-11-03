@@ -28,4 +28,10 @@ def manu():
     return render_template('menu.html', **context)
 
 
+
+@app.route('/new pizza/')
+def new_pizza():
+    return render_template('new_pizza.html')
+
+
 app.run(host='0.0.0.0', port=8080, debug=True)

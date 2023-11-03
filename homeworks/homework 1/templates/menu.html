@@ -7,6 +7,8 @@
     {% extends 'index.html' %}
 </head>
 <body>
+{% import 'macros.html' as macros %}
+
     {% block title %}
     <h1>Меню</h1>
     {% endblock title %}
@@ -21,5 +23,9 @@
 
 
     {% endblock content  %}
+
+    <footer>
+            {{ macros.light_or_dark_mode('body') }}
+    </footer>
 </body>
 </html>
